@@ -8,7 +8,7 @@ import React, {useEffect, useState} from "react";
 function App(){
 
   useEffect(() => {
-    fetch("http://localhost:9292/messages")
+    fetch("http://localhost:9292/trips")
       .then((r) => r.json())
       // .then((trips) => setTrips(trips));
   }, []);
