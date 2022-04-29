@@ -2,16 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from "react";
 // import {Route, Switch} from "react-router-dom";
-// import NavBar from 'NavBar';
-// import Home from './Home';
+// import NavBar from './components/NavBar';
+import Home from './components/Home';
 
 function App(){
+  // Add useStates
 
-  useEffect(() => {
-    fetch("http://localhost:9292/trips")
-      .then((r) => r.json())
-      // .then((trips) => setTrips(trips));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:9292/trips")
+  //     .then((r) => r.json())
+  //     // .then((trips) => setTrips(trips));
+  // }, []);
 
   return(
     <div className="App"
@@ -21,34 +22,27 @@ function App(){
       textAlign: "center"
     }}>
       
-      {/* <NavBar />
-      <Switch>
-          <Route exact path="/trips">
+      {/* <NavBar /> */}
+      {/* <Switch style={{
+      }}> */}
+          {/* <Route path="/trips">
             <Trips />
-          </Route>
-          <Route exact path="/trips/">
+          </Route> */}
+          {/* <Route path="/trips/">
             <NewCoin  />
-          </Route>
-          <Route exact path="/">
+          </Route> */}
+          {/* <Route path="/">
             <div>
               <p>Home Page</p>
               <Home />
             </div>
-          </Route>
-        </Switch> */}
+          </Route> */}
+        {/* </Switch> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Continue editing <code>src/App.js</code> until it works...
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
