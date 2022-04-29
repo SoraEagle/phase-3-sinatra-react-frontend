@@ -1,10 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from "react";
 // import {Route, Switch} from "react-router-dom";
 // import NavBar from 'NavBar';
 // import Home from './Home';
 
 function App(){
+
+  useEffect(() => {
+    fetch("http://localhost:9292/messages")
+      .then((r) => r.json())
+      // .then((trips) => setTrips(trips));
+  }, []);
+
   return(
     <div className="App"
     style={{
@@ -12,6 +20,22 @@ function App(){
       height: "100vh",
       textAlign: "center"
     }}>
+      
+      {/* <NavBar />
+      <Switch>
+          <Route exact path="/trips">
+            <Trips />
+          </Route>
+          <Route exact path="/trips/">
+            <NewCoin  />
+          </Route>
+          <Route exact path="/">
+            <div>
+              <p>Home Page</p>
+              <Home />
+            </div>
+          </Route>
+        </Switch> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
