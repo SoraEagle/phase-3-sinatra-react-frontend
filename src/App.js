@@ -1,9 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+// import {Route, Switch} from "react-router-dom";
+// import NavBar from 'NavBar';
+// import Home from './Home';
 
-function App() {
-  return (
-    <div className="App">
+function App(){
+  return(
+    <div className="App"
+    style={{
+      backgroundColor: "orange",
+      height: "100vh",
+      textAlign: "center"
+    }}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
