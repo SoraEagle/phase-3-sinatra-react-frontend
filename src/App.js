@@ -1,28 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from "react";
-// import {Route, Switch} from "react-router-dom";
-// import NavBar from './components/NavBar';
-import Home from './components/Home';
+import {Route, Switch} from "react-router-dom";
+import NavBar from './components/NavBar';
+// import Home from './components/Home';
 
 function App(){
   // Add useStates
 
-  // useEffect(() => {
-  //   fetch("http://localhost:9292/trips")
-  //     .then((r) => r.json())
-  //     // .then((trips) => setTrips(trips));
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:9292/trips")
+      .then((r) => r.json())
+      // .then((trips) => setTrips(trips));
+  }, []);
 
   return(
     <div className="App"
     style={{
-      backgroundColor: "orange",
+      backgroundColor: "aqua",
       height: "100vh",
       textAlign: "center"
     }}>
       
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <Switch style={{
       }}> */}
           {/* <Route path="/trips">

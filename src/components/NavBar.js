@@ -12,10 +12,15 @@ function NavBar(){
             marginBottom: "12px",
             height: "10vh" //Keeps height of navbar to 10% of browser window's height.
         }}>
-            <NavLink to="/">
+            {/* <NavLink to="/" exact>
                 Home
-            </NavLink>
-            {/*  */}
+            </NavLink> */}
+            {/* <NavLink to="/trips" exact>
+                My Trips
+            </NavLink> */}
+            {/* <NavLink to="/items" exact>
+                My Items
+            </NavLink> */}
         </div>
     )
 }
