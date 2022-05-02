@@ -44,6 +44,19 @@ function App(){
           Continue editing <code>src/App.js</code> until it works...
         </p>
       </header>
+
+      <footer style={{
+          backgroundColor: "coral",
+          borderBottom: "2px solid black",
+          marginBottom: "12px",
+          marginTop: "12px",
+          borderTop: "2px solid black",
+          paddingTop: "10px",
+          textAlign: "center"
+        }}>
+          <p>@2022 Ruby Faker Inc.</p>
+          <p>All rights reserved.</p>
+        </footer>
     </div>
   );
 }
