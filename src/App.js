@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from "react";
 import {Route, Switch} from "react-router-dom";
+import {TripsProvider} from './context/trips';
+import {ItemsProvider} from './context/items';
 import NavBar from './components/NavBar';
 // import Home from './components/Home';
 
@@ -22,6 +24,8 @@ function App(){
       textAlign: "center"
     }}>
       
+      <TripsProvider>
+      <ItemsProvider>
       <NavBar />
       {/* <Switch style={{
       }}> */}
@@ -38,6 +42,8 @@ function App(){
             </div>
           </Route> */}
         {/* </Switch> */}
+        </ItemsProvider>
+        </TripsProvider>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
