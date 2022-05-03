@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import React, {useEffect, useState} from "react";
+// import React, {useEffect, useState} from "react";
 import {Route, Switch} from "react-router-dom";
-import {TripsProvider} from './context/MyTrips';
-import {ItemsProvider} from './context/MyItems';
+import {TripsProvider} from './components/context/MyTrips';
+import {ItemsProvider} from './components/context/MyItems';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Trips from './components/Trips';
@@ -12,12 +12,6 @@ import Items from './components/Items';
 function App(){
   // Have a home page?
   // Add useStates?
-
-  // useEffect(() => {
-  //   fetch("http://localhost:9292/trips")
-  //     .then((r) => r.json())
-  //     .then((trips) => setTrips(trips));
-  // }, []);
 
   return(
     <div className="App"

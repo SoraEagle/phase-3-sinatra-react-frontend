@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import Item from "./Item";
 
 function Items(){
     <div style={{
