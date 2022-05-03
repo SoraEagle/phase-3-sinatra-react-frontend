@@ -1,6 +1,17 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
+const linkStyles = {
+    display: "inline-block",
+    height: "50px",
+    width: "50px",
+    // padding: "12px",
+    margin: "0 6px 6px",
+    // background: "blue",
+    textDecoration: "underline",
+    color: "white"
+  };
+
 // Routes: Home, Trips, Items, ...
 function NavBar(){
     return(
@@ -12,15 +23,15 @@ function NavBar(){
             marginBottom: "12px",
             height: "10vh" //Keeps height of navbar to 10% of browser window's height.
         }}>
-            <NavLink to="/" exact>
+            <NavLink style={linkStyles} to="/" exact>
                 Home
             </NavLink>
-            {/* <NavLink to="/trips" exact>
+            <NavLink style={linkStyles} to="/trips" exact>
                 My Trips
-            </NavLink> */}
-            {/* <NavLink to="/items" exact>
+            </NavLink>
+            <NavLink style={linkStyles} to="/items" exact>
                 My Items
-            </NavLink> */}
+            </NavLink>
         </div>
     );
 }

@@ -1,20 +1,22 @@
 // import logo from './logo.svg';
 import './App.css';
-// import React, {useEffect, useState} from "react";
-import {Route, Switch, BrowserRouter} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Route, Switch} from "react-router-dom";
 import {TripsProvider} from './context/MyTrips';
 import {ItemsProvider} from './context/MyItems';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Trips from './components/Trips';
+import Items from './components/Items';
 
 function App(){
-  // Add useStates
+  // Have a home page?
+  // Add useStates?
 
   // useEffect(() => {
   //   fetch("http://localhost:9292/trips")
   //     .then((r) => r.json())
-  //     // .then((trips) => setTrips(trips));
+  //     .then((trips) => setTrips(trips));
   // }, []);
 
   return(
@@ -27,21 +29,24 @@ function App(){
       
       <TripsProvider>
       <ItemsProvider>
-      
-      <BrowserRouter>
       <NavBar />
       <Switch>
-          {/* <Route path="/trips">
+          <Route path="/trips">
             <Trips />
-          </Route> */}
-          {/* <Route path="/trips/">
+          </Route>
+          <Route path="/items">
             <Items  />
-          </Route> */}
+          </Route>
           <Route path="/">
             <Trips />
           </Route>
+          <Route> {/*For displaying, updating, and deleting info on an individual Trip */}
+            {/* <Trip /> */}
+          </Route>
+          <Route> {/*For displaying, updating, and deleting info on an individual Item */}
+            {/* <Item /> */}
+          </Route>
         </Switch>
-        </BrowserRouter>
         </ItemsProvider>
         </TripsProvider>
       <header className="App-header">
