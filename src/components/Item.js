@@ -1,19 +1,20 @@
 import React, {useContext} from "react";
-// import {ItemsContext} from "./context/MyItems.js";
+import {ItemsContext} from "./context/MyItems.js";
 
 function Item(){
-    // const {Item, setItem} = useContext(ItemsContext);
+    const {Items, setItems} = useContext(ItemsContext);
 
-    function deleteItem(){
-    //     fetch(`http://localhost:9292/item/${item.id}`, { // DELETE fetch request.
-    //     method: "DELETE",
-    // })
-    // .then((r) => r.json())
-    // .then(() => onDeleteItem(item)); // Invoke the onDeleteCoin function with this fetch request.
+    function deleteItem({item}){
+        fetch(`http://localhost:9292/item/${item.id}`, { // DELETE fetch request.
+        method: "DELETE",
+    })
+    .then((r) => r.json())
+    .then(() => onDeleteItem(item)); // Invoke the onDeleteCoin function with this fetch request.
     }
 
     function onDeleteItem(deletedItem){
-        // const updatedItems = .filter((coin) => .id !== deletedItem.id);
+        const updatedItems = Items.filter((item) => item.id !== deletedItem.id);
+        setItems(updatedItems);
     }
 
     function updateItem(){
@@ -24,9 +25,10 @@ function Item(){
         <div style={{
             borderBottom: "2px solid black",
             paddingBottom: "10px",
-            marginBottom: "12px",
+            marginBottom: "12px"
           }}>
-            {/*  */}
+              <button>Update</button>
+              <button onClick={deleteItem}>Delete</button>
         </div>
     );
 }

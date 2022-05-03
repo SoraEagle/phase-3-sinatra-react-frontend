@@ -24,7 +24,7 @@ function NavBar(){
             height: "10vh" //Keeps height of navbar to 10% of browser window's height.
         }}>
             <NavLink style={linkStyles} to="/" exact>
-                Home
+                Home Page
             </NavLink>
             <NavLink style={linkStyles} to="/trips" exact>
                 My Trips

@@ -15,4 +15,4 @@ function Items(){
       </div>
 }
 
-export default Items
+export default Items;
