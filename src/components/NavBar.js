@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-// Routes: Home, Trips, ...
+// Routes: Home, Trips, Items, ...
 function NavBar(){
     return(
         <div
@@ -12,9 +12,9 @@ function NavBar(){
             marginBottom: "12px",
             height: "10vh" //Keeps height of navbar to 10% of browser window's height.
         }}>
-            {/* <NavLink to="/" exact>
+            <NavLink to="/" exact>
                 Home
-            </NavLink> */}
+            </NavLink>
             {/* <NavLink to="/trips" exact>
                 My Trips
             </NavLink> */}
@@ -22,7 +22,7 @@ function NavBar(){
                 My Items
             </NavLink> */}
         </div>
-    )
+    );
 }
 
 export default NavBar;

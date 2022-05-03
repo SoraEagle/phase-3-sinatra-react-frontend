@@ -1,20 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import React, {useEffect, useState} from "react";
-import {Route, Switch} from "react-router-dom";
-import {TripsProvider} from './context/trips';
-import {ItemsProvider} from './context/items';
+// import React, {useEffect, useState} from "react";
+import {Route, Switch, BrowserRouter} from "react-router-dom";
+import {TripsProvider} from './context/MyTrips';
+import {ItemsProvider} from './context/MyItems';
 import NavBar from './components/NavBar';
-// import Home from './components/Home';
+import Home from './components/Home';
+import Trips from './components/Trips';
 
 function App(){
   // Add useStates
 
-  useEffect(() => {
-    fetch("http://localhost:9292/trips")
-      .then((r) => r.json())
-      // .then((trips) => setTrips(trips));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:9292/trips")
+  //     .then((r) => r.json())
+  //     // .then((trips) => setTrips(trips));
+  // }, []);
 
   return(
     <div className="App"
@@ -26,26 +27,25 @@ function App(){
       
       <TripsProvider>
       <ItemsProvider>
+      
+      <BrowserRouter>
       <NavBar />
-      {/* <Switch style={{
-      }}> */}
+      <Switch>
           {/* <Route path="/trips">
             <Trips />
           </Route> */}
           {/* <Route path="/trips/">
-            <NewCoin  />
+            <Items  />
           </Route> */}
-          {/* <Route path="/">
-            <div>
-              <p>Home Page</p>
-              <Home />
-            </div>
-          </Route> */}
-        {/* </Switch> */}
+          <Route path="/">
+            <Trips />
+          </Route>
+        </Switch>
+        </BrowserRouter>
         </ItemsProvider>
         </TripsProvider>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Continue editing <code>src/App.js</code> until it works...
         </p>
