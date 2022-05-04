@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import {Route, Switch} from "react-router-dom";
+import {Routes, Route, Link, Switch} from "react-router-dom";
 import {TripsProvider} from './components/context/MyTrips';
 import {ItemsProvider} from './components/context/MyItems';
 import NavBar from './components/NavBar';
@@ -24,11 +24,11 @@ function App(){
       <TripsProvider>
       <ItemsProvider>
       <NavBar />
-      <Switch>
-          <Route exact path="/trips">
+      {/* <Switch> */}
+          <Route path="/trips">
             <Trips />
           </Route>
-          <Route exact path="/items">
+          <Route path="/items">
             <Items  />
           </Route>
           <Route exact path="/">
@@ -40,7 +40,7 @@ function App(){
           <Route> {/*For displaying, updating, and deleting info on an individual Item */}
             {/* <Item /> */}
           </Route>
-        </Switch>
+        {/* </Switch> */}
         </ItemsProvider>
         </TripsProvider>
       <header className="App-header">
