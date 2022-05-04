@@ -33,14 +33,9 @@ function App(){
           {/* </Switch> */}
           </ItemsProvider></TripsProvider>
 
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Continue editing <code>src/App.js</code> until it works...
-        </p>
-      </header>
+      
 
-      <footer style={{
+      <footer id="footer" style={{
           backgroundColor: "coral",
           borderBottom: "2px solid black",
           marginBottom: "12px",
