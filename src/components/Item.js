@@ -34,3 +34,5 @@ function Item(){
 }
 
 export default Item;
+
+// Currently not connecting to the database for unknown reason...

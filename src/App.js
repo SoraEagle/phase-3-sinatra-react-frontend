@@ -20,31 +20,19 @@ function App(){
       height: "100vh",
       textAlign: "center"
     }}>
-      
-      <TripsProvider>
-      <ItemsProvider>
-        <Routes>
+      <table></table>
+      <TripsProvider><ItemsProvider>
       <NavBar />
-      {/* <Switch> */}
-          <Route path="/trips">
-            <Trips />
-          </Route>
-          <Route path="/items">
-            <Items  />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route> {/*For displaying, updating, and deleting info on an individual Trip */}
-            {/* <Trip /> */}
-          </Route>
-          <Route> {/*For displaying, updating, and deleting info on an individual Item */}
-            {/* <Item /> */}
-          </Route>
+        <Routes>
+
+          {/* <Switch> */}
+          <Route path="/trips" element={<Trips />}></Route>
+          <Route path="/items" element={<Items />}></Route>
+          <Route path="/" element={<Home />}></Route>
           </Routes>
-        {/* </Switch> */}
-        </ItemsProvider>
-        </TripsProvider>
+          {/* </Switch> */}
+          </ItemsProvider></TripsProvider>
+
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
