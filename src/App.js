@@ -23,6 +23,7 @@ function App(){
       
       <TripsProvider>
       <ItemsProvider>
+        <Routes>
       <NavBar />
       {/* <Switch> */}
           <Route path="/trips">
@@ -40,6 +41,7 @@ function App(){
           <Route> {/*For displaying, updating, and deleting info on an individual Item */}
             {/* <Item /> */}
           </Route>
+          </Routes>
         {/* </Switch> */}
         </ItemsProvider>
         </TripsProvider>

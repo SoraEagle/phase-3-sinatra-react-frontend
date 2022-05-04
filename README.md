@@ -1,3 +1,61 @@
+# Phase 3 Project
+## Description
+
+
+
+## Visuals
+A video demonstration of this application:
+<!-- YouTube video here -->
+
+
+## Installation
+To install this **entire** application, you will need to **fork and clone** these two repositories:
+
+[Backend Repository](https://github.com/SoraEagle/phase-3-sinatra-react-project)
+
+[Frontend Repository](https://github.com/SoraEagle/phase-3-sinatra-react-frontend)
+
+Afterwards, make sure to use `bundle install` to install the gems.
+
+
+## Usage
+
+
+### Run Backend (Server) Side
+You can start your server with
+```
+bundle exec rake server
+```
+This will run your server on port [http://localhost:9292](http://localhost:9292).
+
+
+### Run Frontent (Client) Side
+**NOTICE**: Before running the frontend server for the first time, make sure to first run
+```
+npm install
+```
+
+You can start the frontend server with
+```
+npm start
+```
+or
+```
+npm start server
+```
+This will run the server on [this port](http://localhost:3000/).
+
+## Roadmap
+<!--  -->
+
+## Contributing
+Pull requests are welcome.  However, if you decide to make major edits, **do not claim this as your own work!**
+Always reference the original work [here]
+
+## Licenses
+No licenses
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
