@@ -1,10 +1,9 @@
 import React, {useContext} from "react";
-import {ItemsContext} from "./context/MyItems.js";
 
-function Item(){
-    const {Items, setItems} = useContext(ItemsContext);
+function Item({item, onDeleteItem}){
+    
 
-    function deleteItem({item}){
+    function deleteItem(){
         fetch(`http://localhost:9292/item/${item.id}`, { // DELETE fetch request.
         method: "DELETE",
     })
@@ -12,21 +11,17 @@ function Item(){
     .then(() => onDeleteItem(item)); // Invoke the onDeleteCoin function with this fetch request.
     }
 
-    function onDeleteItem(deletedItem){
-        const updatedItems = Items.filter((item) => item.id !== deletedItem.id);
-        setItems(updatedItems);
-    }
-
     function updateItem(){
         // 
     }
 
     return(
-        <div style={{
+        <div id="item" style={{
             borderBottom: "2px solid black",
             paddingBottom: "10px",
             marginBottom: "12px"
           }}>
+              <p>#{item.name}</p>
               <button>Update</button>
               <button onClick={deleteItem}>Delete</button>
         </div>
@@ -35,4 +30,4 @@ function Item(){
 
 export default Item;
 
-// Currently not connecting to the database for unknown reason...
+// Currently not fetching the item info from the database for unknown reason...

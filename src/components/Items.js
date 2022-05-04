@@ -1,9 +1,28 @@
-import React, {useContext} from "react";
-import { ItemsContext } from "./context/MyItems";
+import React, {useContext, useState} from "react";
+import {ItemsContext} from "./context/MyItems";
 import Item from "./Item";
 
 function Items(){
-    const {Items} = useContext(ItemsContext);
+  const {items, setItems} = useContext(ItemsContext);
+    // const [name, setName] = useState('');
+    // const [trip, setTrip] = useState('');
+
+    // const newItem = {
+    //   // 
+    // }
+
+    // function handleNameChange(e){
+    //   setName(e.target.value);
+    // }
+
+    // function handleTripChange(e){
+    //   setTrip(e.target.value);
+    // }
+
+    function onDeleteItem(deletedItem){
+      const updatedItems = items.filter((item) => item.id !== deletedItem.id);
+      setItems(updatedItems);
+  }
 
     if(Item.length === 0) return(
         <div>
@@ -12,10 +31,10 @@ function Items(){
         </div>);
         else console.log("Items: ", Items);
 
+        
+
       return(
-        <div style={{
-            // height: "90vh"
-          }}>
+        <div id="items">
               <h2 style={{
               borderBottom: "2px solid black",
               marginBottom: "12px",
@@ -23,8 +42,8 @@ function Items(){
               }}>
                 My Items:
               </h2>
-              {Items.map((item) => {
-                return <h5 key={item.id}><Item item={item} /></h5>
+              {items.map((item) => {
+                return <h5 key={item.id}><Item item={item} onDeleteItem={onDeleteItem} /></h5>
             })}
           </div> 
       );

@@ -5,7 +5,7 @@ const TripsContext = React.createContext();
 function TripsProvider({children}){
     const [trips, setTrips] = useState([]); // State variables for setting a list of the API's trips.
     useEffect(() => {
-      fetch("https://localhost:9292/trips") //default GET request to the database.
+      fetch("http://localhost:9292/trips") //default GET request to the database.
         .then((r) => r.json())
         .then((data) => setTrips(data)); // sets trips.
     }, []);
